@@ -59,7 +59,7 @@ public class TodayReview0609 {
 		// &&, & --> 이거는and연산자 즉, 둘다 값이 true일때만 true 아니면 다false
 		// ||, | --> 이거는 or연산자 즉, 둘중에 하나만 true, 둘다true 이면 true
 		// ^ --> 이거는 설명하기좀애매한테 둘중에하나만 true 면 그냥 true임
-		// ! --> 이거는 피연산자 를 결과를 바꾸는거임 true 이면 false로 false이면 true로
+		// ! --> 이거는 피연산자 를 결과를 바꾸는거임 true 이면 false로 false이면 true로//
 		
 		
 	}
