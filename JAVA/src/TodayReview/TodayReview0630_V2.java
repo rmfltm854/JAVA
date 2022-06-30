@@ -45,11 +45,12 @@ public class TodayReview0630_V2 {
 		String tel = scan.next();
 		String ID = scan.next();
 		
-		member.add(new Member2(name,age,tel,ID));
+		member.add(new Member2(name,age,tel,ID));//member 리스트에 입력받은거 다넣어주기
 		
-		for(Member2 all : member) {
+		for(Member2 all : member) { //아주많이 성능이향상된 for문으로 출력
 			all.profile();
 		}
+		//이건별로어렵지않다.
 		
 
 	}
