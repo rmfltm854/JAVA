@@ -57,7 +57,7 @@ public class MemberServiceImpl implements MemberService {
 	    	Member name1 = member.get(i);
 	    	
 	    	if(name1.getName().equals(name)) {
-	    		System.out.println(name + "님의 정보는" + name1.getAge()+ "살" + " 학번 : " + name1.getID()+ "전화번호" + name1.getTel());
+	    		name1.profile();
 	    		return;
 	    	}
 	    }
@@ -68,12 +68,63 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public void edit() {//회원 수정
+		System.out.println("수정할 회원의 이름을 입력해주세요");
+		String editname = scan.next();
+for(int i = 0;i<member.size();i++) {
+	    	
+	    	Member name1 = member.get(i);
+	    	
+	    	if(name1.getName().equals(editname)) {
+	    		System.out.println("수정할 회원의 정보를 입력해주세요");
+	    		System.out.print("이름 : ");
+				String name = scan.next();
+				
+				//나이
+				System.out.print("나이 : ");
+				int age = scan.nextInt();
+				
+				//학번
+				System.out.print("학번 : ");
+				String ID = scan.next();
+				
+				//전화번호
+				System.out.print("전화번호 : ");
+				String tel = scan.next();
+				
+				member.set(i,new Member(name,age,ID,tel));
+	    		
+	    		
+	    		return;
+	    	}
+	    }
 		
 		
 	}
 
 	@Override
 	public void delete() {//회원삭제
+		System.out.println("삭제할 회원의 이름을 입력해주세요");
+		String deletename = scan.next();
+		
+for(int i = 0;i<member.size();i++) {
+	    	
+	    	Member name1 = member.get(i);
+	    	
+	    	if(name1.getName().equals(deletename)) {
+	    		System.out.println(deletename + "님의 정보를 삭제합니다.");
+	    		
+	    		member.remove(i);
+	    		System.out.println(deletename + "님의 정보를 삭제했습니다");
+	    		return;
+	    		
+	    	}
+	    }
+	    System.out.println("등록되어있지않은 회원입니다.");
+		
+		
+	
+		
+		
 		
 		
 	}

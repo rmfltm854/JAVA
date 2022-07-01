@@ -53,6 +53,7 @@ public class Member {
 		System.out.println("학번 : " + ID);
 		System.out.println("전화번호 : " + tel);
 		System.out.println("**************************************");
+		System.out.println();
 	}
 	
 	
